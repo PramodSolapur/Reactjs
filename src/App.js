@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AppRoutes from "./components/AppRoutes";
 import FormValidate from "./form/FormValidate";
+import ReactRouter from "./react-router-v6/ReactRouter";
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       {/* <Navbar />
       <AppRoutes />
       <Footer /> */}
-      <FormValidate />
+      {/* <FormValidate /> */}
+      <ReactRouter />
     </>
   );
 }
