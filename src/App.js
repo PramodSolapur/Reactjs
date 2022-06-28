@@ -4,6 +4,8 @@ import AppRoutes from "./components/AppRoutes";
 import FormValidate from "./form/FormValidate";
 import ReactRouter from "./react-router-v6/ReactRouter";
 import CounterApp from "./counter/CounterApp";
+import TodoApp from "./TodoApp/Todo/TodoApp";
+import TodoAppReducer from "./TodoApp/Todo/TodoReducer/TodoApp";
 
 function App() {
   return (
@@ -11,9 +13,11 @@ function App() {
       {/* <Navbar />
       <AppRoutes />
       <Footer /> */}
-      <FormValidate />
+      {/* <FormValidate /> */}
       {/* <ReactRouter /> */}
       {/* <CounterApp /> */}
+      {/* <TodoApp /> */}
+      <TodoAppReducer />
     </>
   );
 }
