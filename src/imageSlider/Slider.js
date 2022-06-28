@@ -1,11 +1,17 @@
-import React from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const SliderEx = () => {
   const initialValues = ["MongoDB", "ExpressJS", "ReactJS", "NodeJS"];
   const [index, setIndex] = useState(0);
   const [value] = useState(initialValues);
+
+  useEffect(() => {
+    const time = setInterval(() => {
+      handleNext();
+    }, 2000);
+    return () => clearInterval(time);
+  });
 
   const checkIndex = (index) => {
     if (index === value.length) {
@@ -51,7 +57,7 @@ const Container = styled.div`
 
 const BtnContainer = styled.div`
   width: 500px;
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   aling-items: center;
@@ -65,8 +71,8 @@ const Slider = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
-  letter-spacing: 2px;
+  font-size: 30px;
+  letter-spacing: 2.5px;
 `;
 const Button = styled.div`
   display: flex;
@@ -74,4 +80,6 @@ const Button = styled.div`
   align-items: center;
   padding: 0px 15px;
   cursor: pointer;
+  font-size: 20px;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
 `;
