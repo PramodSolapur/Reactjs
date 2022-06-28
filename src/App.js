@@ -11,9 +11,9 @@ function App() {
       {/* <Navbar />
       <AppRoutes />
       <Footer /> */}
-      {/* <FormValidate /> */}
+      <FormValidate />
       {/* <ReactRouter /> */}
-      <CounterApp />
+      {/* <CounterApp /> */}
     </>
   );
 }
