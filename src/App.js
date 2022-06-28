@@ -19,9 +19,9 @@ function App() {
       {/* <ReactRouter /> */}
       {/* <CounterApp /> */}
       {/* <TodoApp /> */}
-      {/* <TodoAppReducer /> */}
+      <TodoAppReducer />
       {/* <ExpenseTrackerApp /> */}
-      <Slider />
+      {/* <Slider /> */}
     </>
   );
 }

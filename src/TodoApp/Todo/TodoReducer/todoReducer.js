@@ -1,6 +1,7 @@
 export const initialValues = {
   people: [],
   isModalOpen: false,
+  show: false,
   msg: "",
   color: "",
 };
@@ -10,6 +11,7 @@ export const todoReducer = (state, action) => {
     return {
       ...state,
       people: [...state.people, action.payload],
+      show: true,
       msg: "person added",
       color: "green",
     };
@@ -21,6 +23,7 @@ export const todoReducer = (state, action) => {
     return {
       ...state,
       people: newPeople,
+      show: true,
       msg: "person removed",
       color: "red",
     };
@@ -37,6 +40,9 @@ export const todoReducer = (state, action) => {
     return {
       ...state,
       people: newPeople,
+      show: true,
+      msg: "person edited",
+      color: "orange",
     };
   }
   if (action.type === "CLEAR_ITEMS") {
@@ -52,6 +58,14 @@ export const todoReducer = (state, action) => {
     return {
       ...state,
       isModalOpen: false,
+    };
+  }
+  if (action.type === "CLOSE_MODAL") {
+    return {
+      ...state,
+      show: false,
+      msg: "",
+      color: "",
     };
   }
   return state;

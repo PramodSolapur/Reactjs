@@ -9,22 +9,17 @@ const TodoList = () => {
   const [name, setName] = useState("");
   const [isEditing, setIsEditing] = useState(false);
   const [editId, setEditId] = useState(null);
-  const [showModal, setShowModal] = useState({});
+
+  const closeModal = () => {
+    dispatch({ type: "CLOSE_MODAL" });
+  };
 
   useEffect(() => {
     const timid = setTimeout(() => {
-      handleShowModal();
-      setShowModal({});
+      closeModal();
     }, 2000);
     return () => clearTimeout(timid);
   }, [state.people]);
-
-  const handleShowModal = () => {
-    setShowModal({
-      msg: state.msg,
-      color: state.color,
-    });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,7 +30,6 @@ const TodoList = () => {
     } else if (name) {
       const item = { id: Date.now(), name };
       dispatch({ type: "ADD_PEOPLE", payload: item });
-      handleShowModal();
     }
     setName("");
   };
@@ -49,7 +43,6 @@ const TodoList = () => {
 
   const handleRemove = (id) => {
     dispatch({ type: "REMOVE_PERSON", payload: id });
-    handleShowModal();
   };
 
   const handleClear = () => {
@@ -58,8 +51,18 @@ const TodoList = () => {
 
   return (
     <Container>
-      {showModal.msg && (
-        <p style={{ color: `${showModal.color}` }}>{showModal.msg}</p>
+      {state.show && (
+        <p
+          style={{
+            color: `${state.color}`,
+            textAlign: "center",
+            fontSize: "15px",
+            letterSpacing: "1.5px",
+            textTransform: "capitalize",
+          }}
+        >
+          {state.msg}
+        </p>
       )}
       <Form onSubmit={handleSubmit}>
         <Input

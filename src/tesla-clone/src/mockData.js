@@ -1,0 +1,50 @@
+export const teslaData = [
+  {
+    title: "Model S",
+    description: "Order Online for Touchless Delivery",
+    backgroundImg: "model-s.jpg",
+    leftBtnText: "Custom Order",
+    rightBtnText: "Existing Inventory",
+  },
+  {
+    title: "Model Y",
+    description: "Order Online for Touchless Delivery",
+    backgroundImg: "modelY.jpg",
+    leftBtnText: "Custom Order",
+    rightBtnText: "Existing Inventory",
+  },
+  {
+    title: "Model 3",
+    description: "Order Online for Touchless Delivery",
+    backgroundImg: "model-3.jpg",
+    leftBtnText: "Custom Order",
+    rightBtnText: "Existing Inventory",
+  },
+  {
+    title: "Model X",
+    description: "Order Online for Touchless Delivery",
+    backgroundImg: "model-X.jpg",
+    leftBtnText: "Custom Order",
+    rightBtnText: "Existing Inventory",
+  },
+  {
+    title: "Lowest Cost Solar Panels in America",
+    description: "Money-back guarantee",
+    backgroundImg: "SolarPanels-D.jpg",
+    leftBtnText: "Custom Order",
+    rightBtnText: "Existing Inventory",
+  },
+  {
+    title: "Solar for New Roofs",
+    description: "Solar roof Costs Less Than a New Roof Plus Solar Panels",
+    backgroundImg: "Design-D.jpg",
+    leftBtnText: "Custom Order",
+    rightBtnText: "Existing Inventory",
+  },
+  {
+    title: "Accessories",
+    description: "",
+    backgroundImg: "accessories.jpg",
+    leftBtnText: "Shop Now",
+  },
+];
