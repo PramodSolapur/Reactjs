@@ -8,6 +8,7 @@ import TodoApp from "./TodoApp/Todo/TodoApp";
 import TodoAppReducer from "./TodoApp/Todo/TodoReducer/TodoApp";
 import ExpenseTrackerApp from "./expense-tracker/ExpenseTrackerApp";
 import Slider from "./imageSlider/Slider";
+import AccordionApp from "./accordion/AccordionApp";
 
 function App() {
   return (
@@ -19,9 +20,10 @@ function App() {
       {/* <ReactRouter /> */}
       {/* <CounterApp /> */}
       {/* <TodoApp /> */}
-      <TodoAppReducer />
+      {/* <TodoAppReducer /> */}
       {/* <ExpenseTrackerApp /> */}
       {/* <Slider /> */}
+      <AccordionApp />
     </>
   );
 }
