@@ -7,6 +7,7 @@ import CounterApp from "./counter/CounterApp";
 import TodoApp from "./TodoApp/Todo/TodoApp";
 import TodoAppReducer from "./TodoApp/Todo/TodoReducer/TodoApp";
 import ExpenseTrackerApp from "./expense-tracker/ExpenseTrackerApp";
+import Slider from "./imageSlider/Slider";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
       {/* <CounterApp /> */}
       {/* <TodoApp /> */}
       {/* <TodoAppReducer /> */}
-      <ExpenseTrackerApp />
+      {/* <ExpenseTrackerApp /> */}
+      <Slider />
     </>
   );
 }
