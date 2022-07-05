@@ -9,10 +9,11 @@ import TodoAppReducer from "./TodoApp/Todo/TodoReducer/TodoApp";
 import ExpenseTrackerApp from "./expense-tracker/ExpenseTrackerApp";
 import Slider from "./imageSlider/Slider";
 import AccordionApp from "./accordion/AccordionApp";
-
+import SpaceXApp from "./spaceX/SpaceXApp";
+import { Fragment } from "react";
 function App() {
   return (
-    <>
+    <Fragment>
       {/* <Navbar />
       <AppRoutes />
       <Footer /> */}
@@ -23,8 +24,9 @@ function App() {
       {/* <TodoAppReducer /> */}
       {/* <ExpenseTrackerApp /> */}
       {/* <Slider /> */}
-      <AccordionApp />
-    </>
+      {/*<AccordionApp />*/}
+      <SpaceXApp />
+    </Fragment>
   );
 }
 
