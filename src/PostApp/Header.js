@@ -42,6 +42,7 @@ const Container = styled.div`
 `;
 const SearchBox = styled.div`
   display: flex;
+  padding-left: 10px;
   flex: 0.7;
   input {
     width: 100%;

@@ -8,17 +8,35 @@ import { useNavigate } from "react-router-dom";
 
 const Post = () => {
   const navigate = useNavigate();
-  const { posts, setPosts, title, setTitle, description, setDescription } =
-    useContext(PostContext);
-  // const [title, setTitle] = useState("");
-  // const [description, setDescription] = useState("");
+  const {
+    posts,
+    setPosts,
+    title,
+    setTitle,
+    description,
+    setDescription,
+    editId,
+    isEditing,
+    setIsEditing,
+  } = useContext(PostContext);
   const dateTime = format(new Date(), "MMMM dd, yyyy pp");
   const handleSubmit = (e) => {
     e.preventDefault();
-    setPosts([
-      ...posts,
-      { id: uuidv4(), title, description, createdAt: dateTime },
-    ]);
+    if (isEditing && editId) {
+      const newPosts = posts.map((post) => {
+        if (post.id === editId) {
+          return { ...post, title, description, createdAt: dateTime };
+        }
+        return post;
+      });
+      setPosts(newPosts);
+      setIsEditing(false);
+    } else {
+      setPosts([
+        ...posts,
+        { id: uuidv4(), title, description, createdAt: dateTime },
+      ]);
+    }
     setTitle("");
     setDescription("");
     navigate("/");

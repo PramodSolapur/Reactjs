@@ -5,11 +5,20 @@ import { useNavigate } from "react-router-dom";
 
 export const PostContext = createContext();
 
+const getPosts = () => {
+  const posts = localStorage.getItem("posts");
+  if (posts) {
+    return JSON.parse(posts);
+  }
+  return [];
+};
+
 const PostProvider = ({ children }) => {
   const navigate = useNavigate();
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState(getPosts());
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [isEditing, setIsEditing] = useState(false);
   const [text, setText] = useState("");
   const [editId, setEditId] = useState(null);
   const [filteredPosts, setFilteredPosts] = useState([]);
@@ -21,6 +30,9 @@ const PostProvider = ({ children }) => {
   const editPost = (id) => {
     const editPost = posts.find((post) => post.id === id);
     setEditId(editPost.id);
+    setTitle(editPost.title);
+    setDescription(editPost.description);
+    setIsEditing(true);
     navigate("/post");
   };
 
@@ -31,6 +43,7 @@ const PostProvider = ({ children }) => {
       }
     });
     setFilteredPosts(newPosts);
+    localStorage.setItem("posts", JSON.stringify(posts));
   }, [text, posts]);
 
   return (
@@ -48,6 +61,8 @@ const PostProvider = ({ children }) => {
         setTitle,
         description,
         setDescription,
+        setIsEditing,
+        isEditing,
       }}
     >
       {children}
