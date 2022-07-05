@@ -11,6 +11,7 @@ import Slider from "./imageSlider/Slider";
 import AccordionApp from "./accordion/AccordionApp";
 import SpaceXApp from "./spaceX/SpaceXApp";
 import { Fragment } from "react";
+import WeatherApp from "./weatherApp/WeatherApp";
 function App() {
   return (
     <Fragment>
@@ -25,7 +26,8 @@ function App() {
       {/* <ExpenseTrackerApp /> */}
       {/* <Slider /> */}
       {/*<AccordionApp />*/}
-      <SpaceXApp />
+      {/*  <SpaceXApp />  */}
+      <WeatherApp />
     </Fragment>
   );
 }
