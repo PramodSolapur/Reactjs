@@ -13,6 +13,7 @@ import SpaceXApp from "./spaceX/SpaceXApp";
 import { Fragment } from "react";
 import WeatherApp from "./weatherApp/WeatherApp";
 import PostApp from "./PostApp/PostApp";
+import ZomatoApp from "./Zomato clone/ZomatoApp";
 function App() {
   return (
     <Fragment>
@@ -29,7 +30,8 @@ function App() {
       {/*<AccordionApp />*/}
       {/*  <SpaceXApp />  */}
       {/*  <WeatherApp />  */}
-      <PostApp />
+      {/*  <PostApp />  */}
+      <ZomatoApp />
     </Fragment>
   );
 }
