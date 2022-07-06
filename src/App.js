@@ -14,6 +14,7 @@ import { Fragment } from "react";
 import WeatherApp from "./weatherApp/WeatherApp";
 import PostApp from "./PostApp/PostApp";
 import ZomatoApp from "./Zomato clone/ZomatoApp";
+import GitHubApp from "./githubUsers/GitHubApp";
 function App() {
   return (
     <Fragment>
@@ -31,7 +32,8 @@ function App() {
       {/*  <SpaceXApp />  */}
       {/*  <WeatherApp />  */}
       {/*  <PostApp />  */}
-      <ZomatoApp />
+      {/*  <ZomatoApp />  */}
+      <GitHubApp />
     </Fragment>
   );
 }
