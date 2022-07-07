@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Outfit:wght@100;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #fff;
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1,
+a,
+h3,
+h2 {
+  color: #000;
+}
+
+h1 {
+  text-align: center;
+}
+h4 {
+  font-size: 1.3rem;
+}
+p {
+  font-size: 2rem;
+}
+
+.global {
+  width: 90%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.25);
+}
+
+.global > .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.totalcases {
+  color: rgba(35, 112, 255, 0.933);
+}
+
+.totaldeaths {
+  color: rgba(248, 19, 19, 0.966);
+}
+
+.newcases {
+  color: orange;
+}
+
+.date {
+  color: rgb(7, 208, 27);
+}
+
+.gheading {
+  color: rgb(246, 33, 214);
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.covidBox {
+  width: 90%;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.caseBox {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #ccc;
+}
+
+.casesBox h4,
+p {
+  font-size: 1rem;
+}
+
+.countryName {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.casesBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.caseBox .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.searchBox {
+  width: 90%;
+  max-width: 50%;
+  margin: auto;
+}
+
+.searchBox input {
+  width: 100%;
+  height: 35px;
+  padding: 5px;
+  font-family: "Outfit", sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+}
+
+@media screen and (max-width: 1068px) {
+  .covidBox {
+    grid-template-columns: 1fr;
+  }
+  .global {
+    flex-direction: column;
+  }
+}

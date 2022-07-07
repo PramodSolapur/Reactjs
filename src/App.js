@@ -16,6 +16,7 @@ import PostApp from "./PostApp/PostApp";
 import ZomatoApp from "./Zomato clone/ZomatoApp";
 import GitHubApp from "./githubUsers/GitHubApp";
 import GlrTrvlApp from "./GLR-TRVL/routes/Glr-TrvlApp";
+import CovidApp from "./Covid Tracker/CovidApp";
 function App() {
   return (
     <Fragment>
@@ -35,7 +36,8 @@ function App() {
       {/*  <PostApp />  */}
       {/*  <ZomatoApp />  */}
       {/*  <GitHubApp />  */}
-      <GlrTrvlApp />
+      {/*  <GlrTrvlApp /> */}
+      <CovidApp />
     </Fragment>
   );
 }
