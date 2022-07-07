@@ -15,6 +15,7 @@ import WeatherApp from "./weatherApp/WeatherApp";
 import PostApp from "./PostApp/PostApp";
 import ZomatoApp from "./Zomato clone/ZomatoApp";
 import GitHubApp from "./githubUsers/GitHubApp";
+import GlrTrvlApp from "./GLR-TRVL/routes/Glr-TrvlApp";
 function App() {
   return (
     <Fragment>
@@ -33,7 +34,8 @@ function App() {
       {/*  <WeatherApp />  */}
       {/*  <PostApp />  */}
       {/*  <ZomatoApp />  */}
-      <GitHubApp />
+      {/*  <GitHubApp />  */}
+      <GlrTrvlApp />
     </Fragment>
   );
 }
