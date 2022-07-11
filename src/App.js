@@ -18,6 +18,7 @@ import GitHubApp from "./githubUsers/GitHubApp";
 import GlrTrvlApp from "./GLR-TRVL/routes/Glr-TrvlApp";
 import CovidApp from "./Covid Tracker/CovidApp";
 import ShoppingApp from "./shoppingCart/ShoppingApp";
+import CocktailDBApp from "./cocktailDB/CocktailDBApp";
 function App() {
   return (
     <Fragment>
@@ -39,7 +40,8 @@ function App() {
       {/*  <GitHubApp />  */}
       {/*  <GlrTrvlApp /> */}
       {/*  <CovidApp /> */}
-      <ShoppingApp />
+      {/*    <ShoppingApp /> */}
+      <CocktailDBApp />
     </Fragment>
   );
 }
