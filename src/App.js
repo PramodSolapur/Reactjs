@@ -19,6 +19,7 @@ import GlrTrvlApp from "./GLR-TRVL/routes/Glr-TrvlApp";
 import CovidApp from "./Covid Tracker/CovidApp";
 import ShoppingApp from "./shoppingCart/ShoppingApp";
 import CocktailDBApp from "./cocktailDB/CocktailDBApp";
+import NotificationApp from "./notification/NotificationApp";
 function App() {
   return (
     <Fragment>
@@ -41,7 +42,8 @@ function App() {
       {/*  <GlrTrvlApp /> */}
       {/*  <CovidApp /> */}
       {/*    <ShoppingApp /> */}
-      <CocktailDBApp />
+      {/*  <CocktailDBApp /> */}
+      <NotificationApp />
     </Fragment>
   );
 }
