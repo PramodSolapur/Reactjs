@@ -20,6 +20,7 @@ import CovidApp from "./Covid Tracker/CovidApp";
 import ShoppingApp from "./shoppingCart/ShoppingApp";
 import CocktailDBApp from "./cocktailDB/CocktailDBApp";
 import NotificationApp from "./notification/NotificationApp";
+import PaginationApp from "./pagination/PaginationApp";
 function App() {
   return (
     <Fragment>
@@ -43,7 +44,8 @@ function App() {
       {/*  <CovidApp /> */}
       {/*    <ShoppingApp /> */}
       {/*  <CocktailDBApp /> */}
-      <NotificationApp />
+      {/*        <NotificationApp /> */}
+      <PaginationApp />
     </Fragment>
   );
 }

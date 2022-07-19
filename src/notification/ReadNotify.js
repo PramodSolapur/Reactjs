@@ -5,7 +5,6 @@ import { useNotifyContext } from "./context";
 
 const ReadNotify = () => {
   const { readNotifications, removeReadNotification } = useNotifyContext();
-  console.log(readNotifications);
   return (
     <ReadContainer>
       <h3>Read Messages</h3>
